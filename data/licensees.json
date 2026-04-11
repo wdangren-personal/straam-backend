@@ -1,0 +1,10 @@
+[
+  {
+    "id": "licensee-001",
+    "email": "demo@straamgroup.com",
+    "password": "demo123",
+    "name": "Demo Licensee",
+    "company": "STRAAM Group Demo",
+    "createdAt": "2026-04-11T20:19:00.842Z"
+  }
+]

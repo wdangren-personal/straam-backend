@@ -11,8 +11,11 @@ const PORT = process.env.PORT || 3001;
 // Trust proxy for Railway
 app.set('trust proxy', 1);
 
-// Middleware
-app.use(cors());
+// Middleware - CORS for Aidfl.com and Railway (allow all for testing)
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
 app.use(express.json());
 
 // Data directory for POC

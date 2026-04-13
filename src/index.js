@@ -205,9 +205,9 @@ app.post('/api/projects', (req, res) => {
     sensorSetupComplete,
     sensorPositions: sensorPositions || [],
     generalNotes,
-    status: 'draft',
+    status: req.body.status || 'draft',
     createdAt: new Date().toISOString(),
-    submittedAt: null
+    submittedAt: req.body.status === 'submitted' ? new Date().toISOString() : null
   };
 
   const projects = db.projects();

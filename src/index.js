@@ -16,7 +16,7 @@ app.use(cors({
   origin: true,
   credentials: true
 }));
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
 
 // Data directory for POC
 const DATA_DIR = path.join(__dirname, '..', 'data');
